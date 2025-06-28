@@ -23,7 +23,7 @@ def file_to_sparse_array(file_path):
             print(f"Error: Invalid line format '{line}'. Each line should contain 'row col value'.")
             sys.exit(1)
 
-    result = [[0 for _ in range(collection[0][1])] for _ in range(collection[0][1])]
+    result = [[0 for _ in range(collection[0][1])] for _ in range(collection[0][0])]
 
 # skip the first element in collection as it contains the dimensions
     for row, col, value in collection[1:]:
